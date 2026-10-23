@@ -127,7 +127,7 @@ export default function ProjectDetails() {
 
   if (!project) {
     return (
-      <div className="rounded-2xl border border-slate-200 bg-white p-10 text-center">
+      <div className="rounded-2xl border border-slate-200 bg-black p-10 text-center">
         <FolderKanban
           size={40}
           className="mx-auto text-slate-300"
@@ -164,13 +164,13 @@ export default function ProjectDetails() {
 
         <span>/</span>
 
-        <span className="font-medium text-slate-900">
+        <span className="font-medium text-gray-300">
           {project.name}
         </span>
       </div>
 
       {/* Project header */}
-      <section className="rounded-2xl border border-slate-200 bg-white p-6">
+      <section className="rounded-2xl border border-black bg-black p-6">
         <div className="flex flex-col justify-between gap-5 lg:flex-row lg:items-start">
           <div className="flex gap-4">
             <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-blue-50 text-blue-600">
@@ -196,7 +196,7 @@ export default function ProjectDetails() {
                 </span>
               </div>
 
-              <h1 className="mt-3 text-3xl font-bold tracking-tight text-slate-900">
+              <h1 className="mt-3 text-3xl font-bold tracking-tight text-slate-300">
                 {project.name}
               </h1>
 
@@ -211,7 +211,7 @@ export default function ProjectDetails() {
             <div className="flex shrink-0 gap-2">
               <button
                 onClick={() => setFormOpen(true)}
-                className="flex items-center gap-2 rounded-xl border border-slate-200 px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50"
+                className="flex items-center gap-2 rounded-xl border border-slate-200 px-4 py-2.5 text-sm font-semibold text-slate-300 hover:bg-slate-50"
               >
                 <Edit3 size={16} />
                 Edit
@@ -235,11 +235,11 @@ export default function ProjectDetails() {
               Project manager
             </p>
 
-            <p className="mt-2 font-semibold text-slate-900">
+            <p className="mt-2 font-semibold text-slate-300">
               {project.createdBy?.fullName || "Unknown"}
             </p>
 
-            <p className="mt-1 text-sm text-slate-500">
+            <p className="mt-1 text-sm text-slate-400">
               {project.createdBy?.email || ""}
             </p>
           </div>
@@ -259,7 +259,7 @@ export default function ProjectDetails() {
               Start date
             </p>
 
-            <p className="mt-2 flex items-center gap-2 font-semibold text-slate-900">
+            <p className="mt-2 flex items-center gap-2 font-semibold text-slate-300">
               <CalendarDays size={16} className="text-slate-400" />
               {formatDate(project.startDate)}
             </p>
@@ -282,21 +282,21 @@ export default function ProjectDetails() {
       <div className="flex flex-wrap gap-2">
         <Link
           to={`/projects/${id}`}
-          className="rounded-xl bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white"
+          className="rounded-xl bg-blue-600 px-4 py-2.5 text-sm font-semibold text-black"
         >
           Overview
         </Link>
 
         <Link
           to={`/projects/${id}/tasks`}
-          className="rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50"
+          className="rounded-xl border border-slate-200 bg-black px-4 py-2.5 text-sm font-semibold text-slate-300 hover:bg-slate-50"
         >
           Tasks
         </Link>
 
         <Link
           to={`/projects/${id}/team`}
-          className="rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50"
+          className="rounded-xl border border-slate-200 bg-black px-4 py-2.5 text-sm font-semibold text-slate-300 hover:bg-slate-50"
         >
           Team
         </Link>
@@ -304,18 +304,18 @@ export default function ProjectDetails() {
 
       {/* Project overview */}
       <div className="grid gap-5 lg:grid-cols-3">
-        <section className="rounded-2xl border border-slate-200 bg-white p-5">
+        <section className="rounded-2xl border border-slate-200 bg-black p-5">
           <div className="flex items-center gap-3">
             <div className="rounded-xl bg-blue-50 p-3 text-blue-600">
               <Users size={20} />
             </div>
 
             <div>
-              <p className="text-sm text-slate-500">
+              <p className="text-sm text-slate-400">
                 Project team
               </p>
 
-              <p className="text-2xl font-bold text-slate-900">
+              <p className="text-2xl font-bold text-slate-300">
                 {project.memberCount || 0}
               </p>
             </div>
@@ -329,26 +329,26 @@ export default function ProjectDetails() {
           </Link>
         </section>
 
-        <section className="rounded-2xl border border-slate-200 bg-white p-5">
+        <section className="rounded-2xl border border-slate-200 bg-black p-5">
           <p className="text-sm text-slate-500">
             Created on
           </p>
 
-          <p className="mt-2 text-xl font-bold text-slate-900">
+          <p className="mt-2 text-xl font-bold text-slate-300">
             {formatDate(project.createdAt)}
           </p>
 
-          <p className="mt-2 text-sm text-slate-500">
+          <p className="mt-2 text-sm text-slate-400">
             Project creation date
           </p>
         </section>
 
-        <section className="rounded-2xl border border-slate-200 bg-white p-5">
-          <p className="text-sm text-slate-500">
+        <section className="rounded-2xl border border-slate-200 bg-black p-5">
+          <p className="text-sm text-slate-400">
             Last updated
           </p>
 
-          <p className="mt-2 text-xl font-bold text-slate-900">
+          <p className="mt-2 text-xl font-bold text-slate-300">
             {formatDate(project.updatedAt)}
           </p>
 
@@ -359,14 +359,14 @@ export default function ProjectDetails() {
       </div>
 
       {/* Team preview */}
-      <section className="rounded-2xl border border-slate-200 bg-white">
+      <section className="rounded-2xl border border-slate-200 bg-black">
         <div className="flex items-center justify-between border-b border-slate-100 p-5">
           <div>
-            <h2 className="text-lg font-bold text-slate-900">
+            <h2 className="text-lg font-bold text-slate-400">
               Project team
             </h2>
 
-            <p className="mt-1 text-sm text-slate-500">
+            <p className="mt-1 text-sm text-slate-300">
               People collaborating on this project and their roles.
             </p>
           </div>

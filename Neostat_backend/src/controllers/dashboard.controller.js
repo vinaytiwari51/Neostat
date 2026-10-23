@@ -12,6 +12,7 @@ export const getDashboardSummary = async (req, res) => {
         message: "Authentication required.",
       });
     }
+    console.log("Logged-in User ID:", userId);
 
     // Count projects where the logged-in user is a member
     const totalProjects = await ProjectMembership.countDocuments({

@@ -60,14 +60,6 @@ const DashboardLayout = () => {
     }
   ];
 
-  if (user?.role === "ADMIN") {
-    navigation.push({
-      name: "Users",
-      path: "/users",
-      icon: ShieldCheck
-    });
-  }
-
   return (
     <div className="min-h-screen bg-slate-950 text-white">
 
