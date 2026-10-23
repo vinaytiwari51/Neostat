@@ -1,0 +1,24 @@
+{
+  "name": "clear",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "This is the my full stack project backend ",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "Vinay Tiwari",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "helmet": "^8.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.11.3",
+    "morgan": "^1.12.1",
+    "nodemon": "^3.1.14"
+  }
+}
